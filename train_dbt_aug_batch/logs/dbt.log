@@ -58,3 +58,124 @@
 [0m23:40:09.440801 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m23:40:09.440801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF4D475B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF4F3A40A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF4DC51E70>]}
 [0m23:40:09.441766 [debug] [MainThread]: Flushing usage events
+[0m00:04:34.645026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001590EC55C00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001591177DBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001591177D9F0>]}
+
+
+============================== 00:04:34.649015 | 991b229b-81c3-409f-9cfc-7d648bed1fce ==============================
+[0m00:04:34.649015 [info ] [MainThread]: Running with dbt=1.8.3
+[0m00:04:34.651013 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\admin\\.dbt', 'log_path': 'C:\\dbt_training\\GIT\\vicky-dbt-aug10-repo\\train_dbt_aug_batch\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:04:35.161803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001590EED3A30>]}
+[0m00:04:35.231661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001591174C280>]}
+[0m00:04:35.233613 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m00:04:35.244582 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m00:04:35.533363 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m00:04:35.534361 [debug] [MainThread]: Partial parsing: updated file: train_dbt_aug_batch://models\example\schema.yml
+[0m00:04:35.535358 [debug] [MainThread]: Partial parsing: updated file: train_dbt_aug_batch://models\example\my_second_dbt_model.sql
+[0m00:04:35.536356 [debug] [MainThread]: Partial parsing: updated file: train_dbt_aug_batch://models\example\my_first_dbt_model.sql
+[0m00:04:36.022095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015913801C30>]}
+[0m00:04:36.154663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159133C0D00>]}
+[0m00:04:36.156654 [info ] [MainThread]: Found 2 models, 4 data tests, 446 macros
+[0m00:04:36.157649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159133C3B50>]}
+[0m00:04:36.159687 [info ] [MainThread]: 
+[0m00:04:36.160561 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:04:36.168548 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DB'
+[0m00:04:36.187529 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DB"
+[0m00:04:36.188492 [debug] [ThreadPool]: On list_DBT_DB: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "train_dbt_aug_batch", "target_name": "dev", "connection_name": "list_DBT_DB"} */
+show terse schemas in database DBT_DB
+    limit 10000
+[0m00:04:36.188492 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:04:38.272788 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.084 seconds
+[0m00:04:38.274781 [debug] [ThreadPool]: On list_DBT_DB: Close
+[0m00:04:38.404806 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_DB_DBT_SCH'
+[0m00:04:38.416777 [debug] [ThreadPool]: Using snowflake connection "list_DBT_DB_DBT_SCH"
+[0m00:04:38.417774 [debug] [ThreadPool]: On list_DBT_DB_DBT_SCH: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "train_dbt_aug_batch", "target_name": "dev", "connection_name": "list_DBT_DB_DBT_SCH"} */
+show objects in DBT_DB.DBT_SCH limit 10000
+[0m00:04:38.417774 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:04:39.305251 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.886 seconds
+[0m00:04:39.312234 [debug] [ThreadPool]: On list_DBT_DB_DBT_SCH: Close
+[0m00:04:39.433030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001590F438820>]}
+[0m00:04:39.436021 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:04:39.437017 [info ] [MainThread]: 
+[0m00:04:39.445803 [debug] [Thread-1 (]: Began running node model.train_dbt_aug_batch.my_first_dbt_model
+[0m00:04:39.446804 [info ] [Thread-1 (]: 1 of 2 START sql table model DBT_SCH.my_first_dbt_model ........................ [RUN]
+[0m00:04:39.447800 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.train_dbt_aug_batch.my_first_dbt_model'
+[0m00:04:39.448799 [debug] [Thread-1 (]: Began compiling node model.train_dbt_aug_batch.my_first_dbt_model
+[0m00:04:39.460798 [debug] [Thread-1 (]: Writing injected SQL for node "model.train_dbt_aug_batch.my_first_dbt_model"
+[0m00:04:39.462761 [debug] [Thread-1 (]: Began executing node model.train_dbt_aug_batch.my_first_dbt_model
+[0m00:04:39.498664 [debug] [Thread-1 (]: Writing runtime sql for node "model.train_dbt_aug_batch.my_first_dbt_model"
+[0m00:04:39.501657 [debug] [Thread-1 (]: Using snowflake connection "model.train_dbt_aug_batch.my_first_dbt_model"
+[0m00:04:39.502653 [debug] [Thread-1 (]: On model.train_dbt_aug_batch.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "train_dbt_aug_batch", "target_name": "dev", "node_id": "model.train_dbt_aug_batch.my_first_dbt_model"} */
+create or replace transient table DBT_DB.DBT_SCH.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m00:04:39.502653 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:04:41.149644 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.646 seconds
+[0m00:04:41.174562 [debug] [Thread-1 (]: On model.train_dbt_aug_batch.my_first_dbt_model: Close
+[0m00:04:41.304528 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015910B4ABF0>]}
+[0m00:04:41.306520 [info ] [Thread-1 (]: 1 of 2 OK created sql table model DBT_SCH.my_first_dbt_model ................... [[32mSUCCESS 1[0m in 1.85s]
+[0m00:04:41.308476 [debug] [Thread-1 (]: Finished running node model.train_dbt_aug_batch.my_first_dbt_model
+[0m00:04:41.309909 [debug] [Thread-3 (]: Began running node model.train_dbt_aug_batch.my_second_dbt_model
+[0m00:04:41.310910 [info ] [Thread-3 (]: 2 of 2 START sql view model DBT_SCH.my_second_dbt_model ........................ [RUN]
+[0m00:04:41.312946 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.train_dbt_aug_batch.my_second_dbt_model'
+[0m00:04:41.313903 [debug] [Thread-3 (]: Began compiling node model.train_dbt_aug_batch.my_second_dbt_model
+[0m00:04:41.318928 [debug] [Thread-3 (]: Writing injected SQL for node "model.train_dbt_aug_batch.my_second_dbt_model"
+[0m00:04:41.320884 [debug] [Thread-3 (]: Began executing node model.train_dbt_aug_batch.my_second_dbt_model
+[0m00:04:41.348847 [debug] [Thread-3 (]: Writing runtime sql for node "model.train_dbt_aug_batch.my_second_dbt_model"
+[0m00:04:41.350804 [debug] [Thread-3 (]: Using snowflake connection "model.train_dbt_aug_batch.my_second_dbt_model"
+[0m00:04:41.350804 [debug] [Thread-3 (]: On model.train_dbt_aug_batch.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "train_dbt_aug_batch", "target_name": "dev", "node_id": "model.train_dbt_aug_batch.my_second_dbt_model"} */
+create or replace   view DBT_DB.DBT_SCH.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from DBT_DB.DBT_SCH.my_first_dbt_model
+where id = 1
+  );
+[0m00:04:41.351839 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:04:42.287445 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.935 seconds
+[0m00:04:42.290428 [debug] [Thread-3 (]: On model.train_dbt_aug_batch.my_second_dbt_model: Close
+[0m00:04:42.422008 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '991b229b-81c3-409f-9cfc-7d648bed1fce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015913C11630>]}
+[0m00:04:42.423005 [info ] [Thread-3 (]: 2 of 2 OK created sql view model DBT_SCH.my_second_dbt_model ................... [[32mSUCCESS 1[0m in 1.11s]
+[0m00:04:42.425510 [debug] [Thread-3 (]: Finished running node model.train_dbt_aug_batch.my_second_dbt_model
+[0m00:04:42.427502 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:04:42.428541 [debug] [MainThread]: Connection 'list_DBT_DB' was properly closed.
+[0m00:04:42.429496 [debug] [MainThread]: Connection 'list_DBT_DB_DBT_SCH' was properly closed.
+[0m00:04:42.430535 [debug] [MainThread]: Connection 'model.train_dbt_aug_batch.my_first_dbt_model' was properly closed.
+[0m00:04:42.431492 [debug] [MainThread]: Connection 'model.train_dbt_aug_batch.my_second_dbt_model' was properly closed.
+[0m00:04:42.431492 [info ] [MainThread]: 
+[0m00:04:42.432663 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 6.27 seconds (6.27s).
+[0m00:04:42.434676 [debug] [MainThread]: Command end result
+[0m00:04:42.513451 [info ] [MainThread]: 
+[0m00:04:42.515447 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:04:42.516444 [info ] [MainThread]: 
+[0m00:04:42.518439 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m00:04:42.524421 [debug] [MainThread]: Command `dbt run` succeeded at 00:04:42.524421 after 7.97 seconds
+[0m00:04:42.526416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001590EC55C00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001591112B5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015911D69990>]}
+[0m00:04:42.528411 [debug] [MainThread]: Flushing usage events
